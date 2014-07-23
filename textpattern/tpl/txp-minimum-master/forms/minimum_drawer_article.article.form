@@ -1,0 +1,6 @@
+<h3><txp:title /></h3>
+<txp:if_article_image>
+	<txp:article_image width="64" height="64" />
+</txp:if_article_image>
+<txp:excerpt />
+<p><txp:permlink class="more">Read more…</txp:permlink></p>

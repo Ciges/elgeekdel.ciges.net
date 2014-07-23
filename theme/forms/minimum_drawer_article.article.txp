@@ -1,0 +1,5 @@
+<h3><txp:title /></h3>
+<txp:if_article_image>
+	<txp:article_image />
+</txp:if_article_image>
+<txp:body />

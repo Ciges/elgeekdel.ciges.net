@@ -1,0 +1,55 @@
+<head>
+	<meta charset="utf-8">
+	<title>
+		<txp:if_status>
+			<txp:if_article_list>
+				<txp:if_category>
+					<txp:category title="1" /> <txp:chh_if_data><txp:page_url type="pg" /> </txp:chh_if_data>&bull; <txp:site_name />
+				<txp:else />
+					<txp:if_section name=",default">
+						<txp:site_name />
+					<txp:else />
+						<txp:section title="1" /> <txp:chh_if_data><txp:page_url type="pg" /> </txp:chh_if_data> &bull; <txp:site_name />
+					</txp:if_section>
+				</txp:if_category>
+			</txp:if_article_list>
+			<txp:if_individual_article>
+				<txp:title /> &bull; <txp:site_name />
+			</txp:if_individual_article>
+		<txp:else />
+			<txp:site_name />: <txp:error_status />
+		</txp:if_status>
+	</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<txp:if_individual_article>
+		<txp:if_keywords>
+			<meta name="keywords" content="<txp:keywords />">
+		</txp:if_keywords>
+		<meta name="description" content="Blog personal, de contenido técnico, de José M. Ciges" />
+		<link rel="canonical" href="<txp:permlink />">
+	<txp:else />
+		<meta name="description" content="Blog personal, de contenido técnico, de José M. Ciges" />
+		<link rel="canonical" href="<txp:site_url />">
+	</txp:if_individual_article>
+
+	<meta name="generator" content="Textpattern CMS">
+
+	<txp:if_status status="200">
+		<meta name="robots" content="index, follow, noodp, noydir">
+	<txp:else />
+		<meta name="none">
+	</txp:if_status>
+
+	<txp:feed_link flavor="atom" format="link" label="Atom" section="" />
+	<txp:feed_link flavor="rss" format="link" label="RSS" section="" />
+ 
+	<link rel="stylesheet" media="screen" href="theme/css/minimum.css" />
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+	
+	<!-- Fuentes de Google -->
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+</head>

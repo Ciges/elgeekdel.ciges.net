@@ -1,0 +1,65 @@
+/* Slide-out drawer
+   ========================================================================== */
+
+#drawer-trigger {
+    position: absolute;
+    top: 4em;
+    left: 0;
+    z-index: 10;
+    display: block;
+    border: 0;
+    -webkit-border-radius: 0 1em 1em 0;
+    -moz-border-radius: 0 1em 1em 0;
+    border-radius: 0 1em 1em 0;
+    padding: .5em 1em;
+    font-family: "Ovo", serif;
+    font-size: 12px;
+    color: #fafafa;
+    background: #141414;
+    -webkit-transition: background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+}
+
+#drawer-trigger:hover {
+    padding: .5em 1em .5em 1.5em;
+    color: #fafafa;
+    background: #595959;
+}
+
+#drawer-trigger[aria-pressed="true"] {
+    background: #595959;
+}
+
+#drawer {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    z-index: 9;
+    display: none;
+    -webkit-border-radius: 0 1em 1em 0;
+    -moz-border-radius: 0 1em 1em 0;
+    border-radius: 0 1em 1em 0;
+    padding: 1em 1em 1px 6.5em;
+    max-width: 435px;
+    color: #fafafa;
+    background: #141414;
+}
+
+#drawer h3 {
+}
+
+#drawer p {
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+#drawer a {
+    color: #fafafa;
+    border-color: #fafafa;
+}
+
+#drawer a:hover {
+    color: #fafafa;
+}

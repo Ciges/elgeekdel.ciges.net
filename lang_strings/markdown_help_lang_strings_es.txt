@@ -1,0 +1,16 @@
+#@public
+alt_text => texto alternativo
+and => y
+block_modifiers => Modificadores de bloque
+headers => Encabezamientos
+image => Imagen
+line => Línea
+link => Enlace
+lists => Listas
+online_editor => Editor Online
+preformatted_text => Texto preformateado
+source_code => Código fuente
+source_code_block => bloque de código fuente
+text_format => Formateado de texto
+title => título
+underlined => Subrayado

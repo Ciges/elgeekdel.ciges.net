@@ -1,0 +1,26 @@
+/* Styles for the markdown documentation on write panel */
+
+#markdown_help .mono {
+    font-family: monospace;
+}
+
+#markdown_help ul.plain-list {
+    margin-left: 0.5em;
+    line-height: 1.6em;
+}
+
+#markdown_help ul.plain-list li {
+    margin-bottom: 0.5em;
+}
+
+#markdown_help ul.multiline {
+    line-height: 1em;
+}
+#markdown_help ul.multiline li {
+    margin-bottom: 1em;
+}
+
+#title, #body, #excerpt {
+    font-family: monospace;
+    font-size: 1.1em;
+}

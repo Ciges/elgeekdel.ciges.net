@@ -1,0 +1,18 @@
+<article role="article" itemscope itemtype="http://schema.org/Article">
+	<txp:if_individual_article>
+		<h1 itemprop="name"><txp:title /></h1>
+	<txp:else />
+		<h1 itemprop="name"><txp:permlink><txp:title /></txp:permlink></h1>
+	</txp:if_individual_article>
+	<h4><time datetime="<txp:posted format='iso8601' />" itemprop="datePublished"><txp:posted /></time></h4>
+	<div class="body" itemprop="articleBody">
+		<txp:body />
+	</div>
+</article>
+
+<txp:hide>
+Adding Google+ comments
+</txp:hide>
+<txp:if_individual_article>
+<div class="g-comments" data-href="<txp:permlink />" data-width="1040" data-first_party_property="BLOGGER" data-view_type="FILTERED_POSTMOD"></div>
+</txp:if_individual_article>
