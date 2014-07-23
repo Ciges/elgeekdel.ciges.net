@@ -45,7 +45,7 @@
 	<txp:feed_link flavor="atom" format="link" label="Atom" section="" />
 	<txp:feed_link flavor="rss" format="link" label="RSS" section="" />
  
-	<link rel="stylesheet" media="screen" href="theme/css/minimum.css" />
+	<link rel="stylesheet" media="screen" href="/theme/css/minimum.css" />
 	
 	<!-- Fuentes de Google -->
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>

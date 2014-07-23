@@ -2,5 +2,8 @@
 	<hgroup>
 		<h1><txp:link_to_home><txp:site_name /></txp:link_to_home></h1>
 		<h4><txp:site_slogan /></h4>
+		
+		<!-- Navigation menu -->
+		<txp:section_list wraptag="nav" break="" sections="inicio,blog,about" />
 	</hgroup>
 </header>
