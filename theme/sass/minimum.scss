@@ -7,11 +7,13 @@
 @import "libs/bootstrap_min";
 @import "libs/google_code_prettify";
 // Partials
+@import "partials/colors";
 @import "partials/layout";
 @import "partials/links";
 @import "partials/typography";
 @import "partials/lists";
 @import "partials/tables";
 @import "partials/elements/drawer";
+@import "partials/_navigation_menu";
 // Modifications for responsive navigation
 @import "partials/responsive/medium_size_devices";

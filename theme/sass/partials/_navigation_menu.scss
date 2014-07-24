@@ -1,0 +1,55 @@
+// Responsive menu, css definition for normal menu (ul and li) in big screens and select menu for small devices
+
+// For a screen width of 768 or more, show a clasic navigation menu with ul and li
+.w-768,
+.gt-768 {
+    nav {
+        float: right;
+        padding-top: 0.5em;
+    
+        ul, ol {
+            list-style: none outside none;
+            margin: 0;
+            padding: 0;      
+        }
+        
+        li {
+            display: inline-block;
+            float: right;
+            padding-left: 1.7em;
+            text-transform: uppercase;
+            font-size: 1em;
+        }
+    
+        select {
+            display: none;
+        }
+    }
+}
+
+// For a small screen of less than 768px, replace the menu for a select
+.lt-768 {
+	  header {
+        height: 6.5em;
+        padding-top: 2.5em;
+    }
+
+    nav {
+        clear: both;
+        padding-top: 0em;
+        ul, ol {
+            display: none;
+        }
+        select {
+        	  margin-top: 10px;
+            display: inline-block;
+            width: 100%;
+            background: $background-color;
+            cursor: pointer;
+            appearance: none;
+            outline: none;
+            font-size: 1em;
+            height: 35px;
+        }
+    }  
+}

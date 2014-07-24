@@ -1,0 +1,26 @@
+        <!-- Navigation menu -->
+        <nav id="main-menu">
+            
+            <txp:variable name="sections_in_menu" value="inicio,blog,about" /> <!-- Sections and order to show -->          
+                
+            <!-- Menu for big screens (ul, li), order inverse becase it's float:right -->
+            <txp:section_list 
+                wraptag="ul" 
+                active_class="current" 
+                break="li" 
+                sections='<txp:php>global $variable; echo implode(",", array_reverse(explode(",", $variable["sections_in_menu"])));</txp:php>' />
+                
+            <!-- Menu for small screens (select)-->
+            <select onchange="if (this.value) window.location.href=this.value">
+                <option value="">Menú de navegación</option>
+                <txp:php>
+                    global $variable;
+                    $sections_in_menu = explode(",", $variable['sections_in_menu']);
+                    foreach ($sections_in_menu as $section) {
+                        echo "<option value='".section(array('name' => $section, 'url' => 1))."'";
+                        if (section(array()) == $section) { echo "selected"; };
+                        echo " >".section(array('name' => $section, 'title' => 1))."</option>";    
+                    }
+                </txp:php>
+            </select>
+        </nav>

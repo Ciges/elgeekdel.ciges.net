@@ -2,18 +2,31 @@
    ========================================================================== */
 
 a {
-    color: #333;
+    color: $link_color;
     text-decoration: none;
-    border-bottom: 1px dashed #999;
+    border-bottom: 1px dashed $link_color;
+    
+    &:hover {
+        color: $link_color_hover;
+        text-decoration: none;
+        border-bottom: 1px solid $link_color_hover;
+        
+        -webkit-transition: color .3s ease-in-out;
+        -moz-transition: color .3s ease-in-out;
+        -ms-transition: color .3s ease-in-out;
+        -o-transition: color .3s ease-in-out;
+        transition: color .3s ease-in-out;
+    }
 }
 
-a:hover {
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px solid #999;
-}
-
-header a,
-header a:hover {
-    border: 0;
+header {
+    a {
+        color: $text_color;
+    	  border: 0;
+        
+        &:hover {
+            border: 0;  
+        }
+    }
+    
 }
