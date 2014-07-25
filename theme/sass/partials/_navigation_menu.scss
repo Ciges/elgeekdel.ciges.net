@@ -27,10 +27,33 @@
     }  
 }
 
+// The menu will get under the blog title and centered for mobile in horizontal position
+#{$mobile_horizontal}  {
+    nav {
+        clear: both;
+        width: 90%;
+        margin-left: 2%;
+        margin-right: 8%;
+        font-size: 90%;
+        li {
+        	  width: 18%;
+            a {
+              margin: 0 auto;
+            }
+        }
+    }  
+}
+
+// The menu will get at top right in PC's
+#{$pc} {
+    nav {
+        float: right;
+    }
+}
+
 #{$mobile_horizontal},
 #{$pc}     {    
     nav {
-        float: right;
         padding-top: 0.5em;
     
         ul, ol {
@@ -49,6 +72,11 @@
     
         select {
             display: none;
+        }
+        
+        #web_antigua a {
+            color: $link_color;
+            font-style: italic;
         }
     }
 }

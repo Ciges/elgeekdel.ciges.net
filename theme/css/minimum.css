@@ -5852,9 +5852,26 @@ tfoot:last-child {
   height: 35px;
 }
 
-.w-640.lt-768 nav, .gt-640.lt-768 nav,
+.w-640.lt-768 nav, .gt-640.lt-768 nav {
+  clear: both;
+  width: 90%;
+  margin-left: 2%;
+  margin-right: 8%;
+  font-size: 90%;
+}
+.w-640.lt-768 nav li, .gt-640.lt-768 nav li {
+  width: 18%;
+}
+.w-640.lt-768 nav li a, .gt-640.lt-768 nav li a {
+  margin: 0 auto;
+}
+
 .w-768 nav, .gt-768 nav {
   float: right;
+}
+
+.w-640.lt-768 nav, .gt-640.lt-768 nav,
+.w-768 nav, .gt-768 nav {
   padding-top: 0.5em;
 }
 .w-640.lt-768 nav ul, .w-640.lt-768 nav ol, .gt-640.lt-768 nav ul, .gt-640.lt-768 nav ol,
@@ -5875,6 +5892,11 @@ tfoot:last-child {
 .w-640.lt-768 nav select, .gt-640.lt-768 nav select,
 .w-768 nav select, .gt-768 nav select {
   display: none;
+}
+.w-640.lt-768 nav #web_antigua a, .gt-640.lt-768 nav #web_antigua a,
+.w-768 nav #web_antigua a, .gt-768 nav #web_antigua a {
+  color: #21759b;
+  font-style: italic;
 }
 
 /* Layout changes for small devices (up to 767px width)
@@ -5913,5 +5935,5 @@ tfoot:last-child {
 }
 
 .w-640.lt-768 header, .gt-640.lt-768 header {
-  font-size: 90%;
+  font-size: 100%;
 }

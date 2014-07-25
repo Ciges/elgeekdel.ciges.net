@@ -4,11 +4,22 @@
             <txp:variable name="sections_in_menu" value="inicio,blog,about" /> <!-- Sections and order to show -->          
                 
             <!-- Menu for big screens (ul, li), order inverse becase it's float:right -->
-            <txp:section_list 
-                wraptag="ul" 
-                active_class="current" 
-                break="li" 
-                sections='<txp:php>global $variable; echo implode(",", array_reverse(explode(",", $variable["sections_in_menu"])));</txp:php>' />
+            <ul>
+                <li id="web_antigua">
+                   <a href="http://www.ciges.net">web antigua</a> 
+                </li>
+                <txp:php>
+                    global $variable;
+                    $sections_in_menu = array_reverse(explode(",", $variable['sections_in_menu']));
+                    foreach ($sections_in_menu as $section) {
+                        echo "
+                            <li".(section(array()) == $section ? " class='current'" : "").">
+                                <a href='".section(array('name' => $section, 'url' => 1))."'>".section(array('name' => $section, 'title' => 1))."</a>
+                            </li>
+                            ";
+                    }
+                </txp:php>
+            </ul>
                 
             <!-- Menu for small screens (select)-->
             <select onchange="if (this.value) window.location.href=this.value">
@@ -17,10 +28,12 @@
                     global $variable;
                     $sections_in_menu = explode(",", $variable['sections_in_menu']);
                     foreach ($sections_in_menu as $section) {
-                        echo "<option value='".section(array('name' => $section, 'url' => 1))."'";
-                        if (section(array()) == $section) { echo "selected"; };
-                        echo " >".section(array('name' => $section, 'title' => 1))."</option>";    
+                        echo "
+                            <option value='".section(array('name' => $section, 'url' => 1))."'".(section(array()) == $section ? "selected" : "" )." >"
+                                .section(array('name' => $section, 'title' => 1)).
+                            "</option>";    
                     }
                 </txp:php>
+                <option value="http://www.ciges.net">Web antigua</option>
             </select>
         </nav>
