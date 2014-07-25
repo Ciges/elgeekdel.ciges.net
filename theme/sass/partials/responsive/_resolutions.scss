@@ -1,0 +1,6 @@
+// "Frontier" resolutions for responsive design
+$res_mob_h: 640;
+$res_pc: 768;
+$mobile_vertical: ".lt-#{$res_mob_h}";
+$mobile_horizontal: ".w-#{$res_mob_h}.lt-#{$res_pc}, .gt-#{$res_mob_h}.lt-#{$res_pc}";
+$pc: ".w-#{$res_pc}, .gt-#{$res_pc}";

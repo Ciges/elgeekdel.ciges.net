@@ -1,8 +1,11 @@
 /* Layout changes for small devices (up to 767px width)
    ========================================================================== */
 
-.lt-768 {
-
+#{$mobile_vertical},
+#{$mobile_horizontal} {
+    header {
+        padding-top: 2.5em;
+    }
     #drawer-trigger {
         top: 0;
         left: 33%;
@@ -27,5 +30,14 @@
         max-width: inherit;
     }
 
+    .span9 {
+        width:  98%;
+    }
+
 }
 
+#{$mobile_horizontal}  {
+    header {
+        font-size: 90%;
+    }
+}

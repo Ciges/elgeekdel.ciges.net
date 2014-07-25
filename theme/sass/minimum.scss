@@ -6,8 +6,10 @@
 // Libs (bootstrap_min.css)
 @import "libs/bootstrap_min";
 @import "libs/google_code_prettify";
-// Partials
+// Variables
 @import "partials/colors";
+@import "partials/responsive/resolutions";
+// Partials
 @import "partials/layout";
 @import "partials/links";
 @import "partials/typography";
